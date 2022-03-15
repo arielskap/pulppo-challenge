@@ -16,8 +16,8 @@ const Column = ({ position }: Props) => {
 			const firstCell = cells[0]
 			const secondCell = cells[1]
 			if (firstCell && secondCell) {
-				const inputFirstCellElement: HTMLInputElement | null = document.querySelector(`#${firstCell.trim()}`)
-				const inputSecondCellElement: HTMLInputElement | null = document.querySelector(`#${secondCell.trim()}`)
+				const inputFirstCellElement: HTMLInputElement | null = document.querySelector(`#${firstCell.toUpperCase().trim()}`)
+				const inputSecondCellElement: HTMLInputElement | null = document.querySelector(`#${secondCell.toUpperCase().trim()}`)
 				const thisInputElement = inputRef.current
 
 				if (inputFirstCellElement && inputSecondCellElement && thisInputElement) {
@@ -36,7 +36,7 @@ const Column = ({ position }: Props) => {
 	}
 
 	return (
-		<input id={position} onBlur={handleBlur} ref={inputRef} type="text" className="border bg-black border-gray-700 p-1"/>
+		<input id={position} onBlur={handleBlur} ref={inputRef} type="text" className="p-1 bg-black border border-gray-700"/>
 	)
 }
 
