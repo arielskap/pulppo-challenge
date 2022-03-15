@@ -4,9 +4,9 @@ import Link from 'next/link'
 const Home: NextPage = () => {
   return (
 		<section className="min-h-screen flex flex-col items-center justify-center bg-black">
-			<h1 className='font-bold mb-8 text-2xl text-white'>Pulpo Challenge!</h1>
+			<h1 className='font-bold mb-8 text-2xl text-white'>Pulppo Challenge!</h1>
 			<nav>
-				<ul className='space-y-4'>
+				<ul className='flex flex-col items-center gap-y-4'>
 					<li>
 						<Link href="/excel">
 							<a
@@ -15,6 +15,9 @@ const Home: NextPage = () => {
 								Go to Excel
 							</a>
 						</Link>
+					</li>
+					<li>
+						<a className='hover:underline text-white' href="/Ariel Villarreal Developer Challenge.pdf" download>Download Answers</a>
 					</li>
 				</ul>
 			</nav>
